@@ -33,17 +33,19 @@ Things you may want to cover:
 
 ### Association
 - has_many :messages
+- has_many :users_chat_groups
 - has_many :chat_groups, through: :users_chat_groups
+
 
 ## chat_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|message_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :messages
+- has_many :users_chat_groups
 - has_many :users, through: :users_chat_groups
 
 ## messagesテーブル
