@@ -1,0 +1,8 @@
+.flash-box{
+  background-color:$color-blue;
+  color: $color-white;
+  text-align: center;
+}
+
+@import "./side";
+@import "./main";

@@ -1,0 +1,38 @@
+.flash-box
+  グループを作成しました
+.wrapper
+  .chat-side
+    .side-header
+      %p.side-header__user-name
+        名前
+      %ul.user-menu
+        %li.user-menu__edit-user
+          =link_to "", class: "user-menu__edit-user" do
+            = fa_icon '\f044', class: "fa fa-edit", style: "color:white"
+        %li.user-menu__new-group
+          =link_to "", class: "user-menu__new-group" do
+            = fa_icon '\f013', class: "fa fa-cog", style: "color:white"
+    .groups
+      =link_to "" do
+        = render partial: 'group'
+
+  .chat-main
+    .main-header
+      .current-group
+        %p.current-group__name
+          グループ名
+        %ul.member-list
+          %li.member-list__member
+            メンバーリスト
+      %form.main-header__edit-btn
+        Edit
+    .messages
+      = render partial: 'message'
+    .form
+      %input.input-box{:placeholder => "type a message"}
+        %ul.input-box__icon
+          %li.input-box__icon__pictures-btn
+            =link_to "", class: "input-box__icon__pictures-btn" do
+              = fa_icon '\f03e', class: "fa fa-image", style: "color:black"
+      %form.form__submit-btn
+        Send
