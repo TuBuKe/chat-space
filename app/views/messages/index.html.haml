@@ -3,36 +3,36 @@
 .wrapper
   .chat-side
     .side-header
-      %p{:class => "side-header__user-name"}
+      %p.side-header__user-name
         名前
-      %ul{:class => "user-menu"}
-        %li{:class => "user-menu__edit-user"}
+      %ul.user-menu
+        %li.user-menu__edit-user
           =link_to "", class: "user-menu__edit-user" do
             = fa_icon '\f044', class: "fa fa-edit", style: "color:white"
-        %li{:class => "user-menu__new-group"}
+        %li.user-menu__new-group
           =link_to "", class: "user-menu__new-group" do
             = fa_icon '\f013', class: "fa fa-cog", style: "color:white"
     .groups
-      %a{:href => ''}
+      =link_to "" do
         = render partial: 'group'
 
   .chat-main
     .main-header
       .current-group
-        %p{:class => "current-group__name"}
+        %p.current-group__name
           グループ名
-        %ul{:class => "member-list"}
-          %li{:class => "member-list__member"}
+        %ul.member-list
+          %li.member-list__member
             メンバーリスト
-      %form{:class => "main-header__edit-btn"}
+      %form.main-header__edit-btn
         Edit
     .messages
       = render partial: 'message'
     .form
-      %input{:class => "input-box", :placeholder => "type a message"}
-        %ul{:class => "input-box__icon"}
-          %li{:class => "input-box__icon__pictures-btn"}
+      %input.input-box{:placeholder => "type a message"}
+        %ul.input-box__icon
+          %li.input-box__icon__pictures-btn
             =link_to "", class: "input-box__icon__pictures-btn" do
               = fa_icon '\f03e', class: "fa fa-image", style: "color:black"
-      %form{:class => "form__submit-btn"}
+      %form.form__submit-btn
         Send
