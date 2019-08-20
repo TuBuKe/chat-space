@@ -1,63 +1,9 @@
 .message
   %p.message__user-name
-    ユーザー名
+    = message.user.name
   %p.message__post-date
-    日時
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
   %p.message__latest-message
-    メッセージ
-
-.message
-  %p.message__user-name
-    ユーザー名
-  %p.message__post-date
-    日時
-  %p.message__latest-message
-    メッセージ
-
-.message
-  %p.message__user-name
-    ユーザー名
-  %p.message__post-date
-    日時
-  %p.message__latest-message
-    メッセージ
-
-.message
-  %p.message__user-name
-    ユーザー名
-  %p.message__post-date
-    日時
-  %p.message__latest-message
-    メッセージ
-
-.message
-  %p.message__user-name
-    ユーザー名
-  %p.message__post-date
-    日時
-  %p.message__latest-message
-    メッセージ
-
-.message
-  %p.message__user-name
-    ユーザー名
-  %p.message__post-date
-    日時
-  %p.message__latest-message
-    メッセージ
-
-.message
-  %p.message__user-name
-    ユーザー名
-  %p.message__post-date
-    日時
-  %p.message__latest-message
-    メッセージ
-
-.message
-  %p.message__user-name
-    ユーザー名
-  %p.message__post-date
-    日時
-  %p.message__latest-message
-    メッセージ
+    - if message.content.present?
+      = message.content
+    = image_tag message.image.url if message.image.present?
