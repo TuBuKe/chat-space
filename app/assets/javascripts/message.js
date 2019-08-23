@@ -31,7 +31,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(message){
       var html = buildHTML(message);
       $('.messages').append(html);
-      $('.input-box').val('');
+      $('#new_message')[0].reset();
       $('.hidden').val('');
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
