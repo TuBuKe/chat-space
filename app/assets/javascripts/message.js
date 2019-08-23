@@ -27,6 +27,13 @@
       processData: false,
       contentType: false
     })
+    .done(function(message){
+      var html = buildHTML(message);
+      $('.messages').append(html);
+      $('.input-box').val('');
+      $('.hidden').val('');
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+    })
     .fail(function(message){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
