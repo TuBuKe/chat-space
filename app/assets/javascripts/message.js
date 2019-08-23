@@ -15,3 +15,6 @@
                 </div>`
   return html;
   }
+    .fail(function(message){
+      alert('エラーが発生したためメッセージは送信できませんでした。');
+    })
