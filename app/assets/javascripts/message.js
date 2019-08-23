@@ -18,3 +18,6 @@
     .fail(function(message){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
+    .always(function(message){
+      $('.form__submit-btn').prop('disabled', false);　
+    })
