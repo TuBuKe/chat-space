@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function(){
   function buildHTML(message){
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
@@ -40,3 +41,5 @@
     .always(function(message){
       $('.form__submit-btn').prop('disabled', false);　
     })
+  })
+});
