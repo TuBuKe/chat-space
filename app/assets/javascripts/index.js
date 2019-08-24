@@ -52,3 +52,16 @@ $(function(){
     })
   });
 
+    $(document).on("click", ".user-search-add", function () {
+      $('#chat-group-users').val();
+        var userId = $(this).data('user-id');
+        var userName = $(this).data('user-name');
+        addUser(userId,userName);
+        $(this).parent().remove();
+    });
+  
+    $(document).on("click", ".user-search-remove", function () {
+      $(this).parent().remove();
+    });
+  });
+});
