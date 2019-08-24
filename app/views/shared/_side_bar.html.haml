@@ -3,11 +3,11 @@
     %p.side-header__user-name
       = current_user.name
     %ul.user-menu
-      %li.user-menu__edit-user
-        =link_to edit_user_path(current_user), class: "user-menu__edit-user" do
-          = fa_icon '\f044', class: "fa fa-edit", style: "color:white"
       %li.user-menu__new-group
         =link_to new_group_path, class: "user-menu__new-group" do
+          = fa_icon '\f044', class: "fa fa-edit", style: "color:white"
+      %li.user-menu__edit-user
+        =link_to edit_user_path(current_user), class: "user-menu__edit-user" do
           = fa_icon '\f013', class: "fa fa-cog", style: "color:white"
   .groups
     = render partial: 'messages/group'
