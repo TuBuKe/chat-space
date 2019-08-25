@@ -9,10 +9,10 @@
           = @group.name
         %ul.member-list
           %li.member-list__member
-            - @group.group_users.each do |group_user|
-              = group_user.user.name
+            - @group.users.each do |group_user|
+              = group_user.name
       %form.main-header__edit-btn
-        = link_to "Edit", ""
+        = link_to "Edit", "edit"
     .messages
       = render @messages
     .form
