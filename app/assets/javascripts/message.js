@@ -42,4 +42,12 @@ $(document).on('turbolinks:load', function(){
       $('.form__submit-btn').prop('disabled', false);　
     })
   })
+
+  var interval = setInterval(function(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      reloadMessages();
+    } else {
+      clearInterval(interval);
+    }
+  }, 5000)
 });
