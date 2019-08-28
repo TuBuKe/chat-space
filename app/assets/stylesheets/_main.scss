@@ -42,6 +42,11 @@
       color: $color-blue;
       display: table-cell;
       vertical-align: middle;
+      line-height: 40px;
+
+      a{
+        text-decoration: none; 
+      }
     }
   }
 
