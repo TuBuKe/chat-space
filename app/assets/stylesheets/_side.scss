@@ -29,6 +29,11 @@
     overflow: scroll;
 
     .group{
+      
+      a{
+        text-decoration: none; 
+      }
+
       padding: 20px 0 40px;
 
       &__group-name{
