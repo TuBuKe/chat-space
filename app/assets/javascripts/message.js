@@ -45,7 +45,10 @@ $(document).on('turbolinks:load', function(){
   })
 
   var reloadMessages = function() {
-    last_message_id = $('.message:last').data('message-id');
+    if (last_message_id = $('.message:last').data('message-id')){
+    } else {
+      last_message_id = 0;
+    }
     $.ajax({
       url: 'api/messages',
       type: 'get',
